@@ -15,6 +15,27 @@
       			<input id="new-todo" placeholder="What needs to be done?" autofocus>
     		</header>
     		
+    		<script type="text/template" id="stats-template">
+    			<span id="todo-count">
+    				<strong><%= remaining %></strong>
+    			 	<%= remaining === 1 ? 'item' : 'items' %> left
+    			</span>
+   			 	<ul id="filters">
+      				<li>
+        				<a class="selected" href="#/">All</a>
+      				</li>
+      				<li>
+        				<a href="#/active">Active</a>
+      				</li>
+      				<li>
+        				<a href="#/completed">Completed</a>
+      				</li>
+    			</ul>
+    			<% if (completed) { %>
+    			<button id="clear-completed">Clear completed (<%= completed %>)</button>
+    			<% } %>
+  			</script>
+
     		<section id="main">
       			<input id="toggle-all" type="checkbox">
       			<label for="toggle-all">Mark all as complete</label>
@@ -37,27 +58,6 @@
       			<button class="destroy"></button>
     		</div>
     		<input class="edit" value="<%= title %>">
-  		</script>
-
-		<script type="text/template" id="stats-template">
-    		<span id="todo-count">
-    			<strong><%= remaining %></strong>
-    			 <%= remaining === 1 ? 'item' : 'items' %> left
-    		</span>
-   			 <ul id="filters">
-      			<li>
-        			<a class="selected" href="#/">All</a>
-      			</li>
-      			<li>
-        			<a href="#/active">Active</a>
-      			</li>
-      			<li>
-        			<a href="#/completed">Completed</a>
-      			</li>
-    		</ul>
-    			<% if (completed) { %>
-    			<button id="clear-completed">Clear completed (<%= completed %>)</button>
-    		<% } %>
   		</script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
