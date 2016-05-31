@@ -2,7 +2,7 @@ var app = app ||  {};
 
 //Todo Model
 
-var Todo = Backbone.Model.extend({
+app.Todo = Backbone.Model.extend({
 
 	//Defaults attributes 
 	defaults: {
