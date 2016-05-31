@@ -321,6 +321,7 @@ html #clear-completed:active {
 
 #clear-completed:hover {
 	text-decoration: underline;
+	background-color: red;
 }
 
 #info {
