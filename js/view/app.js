@@ -29,7 +29,7 @@ var app = app || {};
       this.$input = this.$('#new-todo');
       this.$footer = this.$('#footer');
       this.$main = this.$('#main');
-
+     
       this.listenTo(app.Todos, 'add', this.addOne);
       this.listenTo(app.Todos, 'reset', this.addAll);
 
@@ -38,6 +38,7 @@ var app = app || {};
       this.listenTo(app.Todos,'filter', this.filterAll);
       this.listenTo(app.Todos, 'all', this.render);
 
+      console.log('app view initialization');
       app.Todos.fetch();
     },
 
