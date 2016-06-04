@@ -26,6 +26,7 @@ var app = app || {};
     // collection, when items are added or changed. Kick things off by
     // loading any preexisting todos that might be saved in *localStorage*.
     initialize: function() {
+      console.log('App View initialization');
       this.allCheckbox = this.$('#toggle-all')[0];
       this.$input = this.$('#new-todo');
       this.$footer = this.$('#footer');
@@ -46,6 +47,7 @@ var app = app || {};
     // Re-rendering the App just means refreshing the statistics -- the rest
     // of the app doesn't change.
     render: function() {
+      console.log('AppView - Render');
       var completed = app.Todos.completed().length;
       var remaining = app.Todos.remaining().length;
 
@@ -73,6 +75,7 @@ var app = app || {};
     // Add a single todo item to the list by creating a view for it, and
     // appending its element to the `<ul>`.
     addOne: function( todo ) {
+      console.log('Appview - addOne');
       var view = new app.TodoView({ model: todo });
       $('#todo-list').append( view.render().el );
     },
@@ -97,6 +100,7 @@ var app = app || {};
     // New
     // Generate the attributes for a new Todo item.
     newAttributes: function() {
+      console.log('Appview - newAttributes');
       return {
         title: this.$input.val().trim(),
         order: app.Todos.nextOrder(),
@@ -109,6 +113,7 @@ var app = app || {};
     // persisting it to localStorage.
     createOnEnter: function( event ) {
     
+    console.log('AppView - createOnEnter');
       if ( event.which !== ENTER_KEY || !this.$input.val().trim() ) {
         return;
       }

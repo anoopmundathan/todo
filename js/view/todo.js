@@ -26,6 +26,7 @@ var app = app || {};
     // a one-to-one correspondence between a **Todo** and a **TodoView** in this
     // app, we set a direct reference on the model for convenience.
     initialize: function() {
+      console.log('TodoView initialization');
       this.listenTo(this.model, 'change', this.render);
       this.listenTo(this.model, 'destroy', this.remove);        // NEW
       this.listenTo(this.model, 'visible', this.toggleVisible); // NEW
@@ -33,6 +34,7 @@ var app = app || {};
 
     // Re-renders the titles of the todo item.
     render: function() {
+      console.log('TodoView render');
       this.$el.html( this.template( this.model.attributes ) );
       this.$el.toggleClass( 'completed', this.model.get('completed') ); // NEW
       this.toggleVisible();                                             // NEW
