@@ -1,5 +1,6 @@
 // Todo Collection
 
+(function() {
 var TodoList = Backbone.Collection.extend({
 
 	// Reference to the collection's model
@@ -37,3 +38,4 @@ var TodoList = Backbone.Collection.extend({
 
 // Create our global collection of **Todos**.
 app.Todos = new TodoList();
+})();

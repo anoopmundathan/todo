@@ -2,6 +2,7 @@ var app = app ||  {};
 
 //Todo Model
 
+(function () {
 app.Todo = Backbone.Model.extend({
 
 	//Defaults attributes 
@@ -17,3 +18,4 @@ app.Todo = Backbone.Model.extend({
 		});
 	}
 });
+})();

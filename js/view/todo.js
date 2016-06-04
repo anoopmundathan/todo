@@ -3,6 +3,7 @@ var app = app || {};
   // Todo Item View
   // --------------
 
+(function() {
   // The DOM element for a todo item...
   app.TodoView = Backbone.View.extend({
 
@@ -90,3 +91,4 @@ var app = app || {};
       this.model.destroy();
     }
   });
+})(); 

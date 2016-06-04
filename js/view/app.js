@@ -3,6 +3,7 @@ var app = app || {};
   // The Application
   // ---------------
 
+(function() {
   // Our overall **AppView** is the top-level piece of UI.
   app.AppView = Backbone.View.extend({
 
@@ -134,3 +135,4 @@ var app = app || {};
       });
     }
   });
+})();
