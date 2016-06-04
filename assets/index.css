@@ -121,7 +121,7 @@ label[for='toggle-all'] {
 	display: none;
 }
 
-.toggle-all {
+#toggle-all {
 	position: absolute;
 	top: -55px;
 	left: -12px;
@@ -321,7 +321,6 @@ html #clear-completed:active {
 
 #clear-completed:hover {
 	text-decoration: underline;
-	background-color: red;
 }
 
 #info {

@@ -38,7 +38,6 @@ var app = app || {};
       this.listenTo(app.Todos,'filter', this.filterAll);
       this.listenTo(app.Todos, 'all', this.render);
 
-      console.log('app view initialization');
       app.Todos.fetch();
     },
 
@@ -108,7 +107,7 @@ var app = app || {};
     // If you hit return in the main input field, create new Todo model,
     // persisting it to localStorage.
     createOnEnter: function( event ) {
-      console.log('create');
+    
       if ( event.which !== ENTER_KEY || !this.$input.val().trim() ) {
         return;
       }
